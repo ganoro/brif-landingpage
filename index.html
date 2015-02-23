@@ -34,19 +34,42 @@
 
     
     <script>
-        function loginFinished() {
-            alert ("hello");    
-        }
-        
-        function render() {
-            gapi.signin.render("customBtn", { 'clientid' : "808248997275-ol6kol8h23j018iug3d5odi9vhrja9j5.apps.googleusercontent.com", 
-                'cookiepolicy' : "single_host_origin", 
-                'scope' : "profile https://mail.google.com https://www.google.com/m8/feeds https://www.googleapis.com/auth/drive", 
-                'callback' : loginFinished,
-                'approvalprompt' : 'auto'
-            });           
-            
-        }
+        (function() {
+              var po = document.createElement('script');
+              po.type = 'text/javascript'; po.async = true;
+              po.src = 'https://apis.google.com/js/client:plusone.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(po, s);
+        })();
+        (function() {
+              var po = document.createElement('script');
+              po.type = 'text/javascript'; po.async = true;
+              po.src = 'https://apis.google.com/js/api.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(po, s);
+        })();
+        (function() {
+            var once = false;
+            /**
+             * Handling the GAPI login 
+             */          
+            window.loginFinished = function (result) {
+                if (!once) {
+                    once = true;
+                    if (result.error) {
+                        gapi.signin.render("customBtn", { 'clientid' : "808248997275-ol6kol8h23j018iug3d5odi9vhrja9j5.apps.googleusercontent.com", 
+                            'cookiepolicy' : "single_host_origin", 
+                            'scope' : "profile https://mail.google.com https://www.google.com/m8/feeds https://www.googleapis.com/auth/drive", 
+                            'callback' : loginFinished,
+                            'approvalprompt' : 'auto'
+                        });           
+                    } else {
+                        alert("already registered");
+                    }
+                }
+            }
+            window.returningSignin = function() { };
+        })();  
     </script>
 </head>
 
@@ -96,6 +119,15 @@
                     <div class="intro-text">
                         <span class="name">experience your gmail, anew.</span>
 
+                        <span id="checkStateButton" style="display:none">
+                            <span class="g-signin"
+                                data-callback="loginFinished"
+                                data-clientid="808248997275.apps.googleusercontent.com"
+                                data-cookiepolicy="single_host_origin"
+                                data-scope="profile https://mail.google.com https://www.google.com/m8/feeds https://www.googleapis.com/auth/drive">
+                            </span>
+                        </span> 
+                        
                         <div id="gSignInWrapper">
                             <div id="customBtn" class="customGPlusSignIn">
                                 <span class="icon"></span>
