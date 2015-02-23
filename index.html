@@ -64,7 +64,12 @@
                             'approvalprompt' : 'auto'
                         });           
                     } else {
-                        alert("already registered");
+                        customBtn
+                        $("#customBtn").click(function() {
+                            alert("goes to brif");
+                        });
+                        
+                        $("#buttonText").html("Go to Brif!");
                     }
                 }
             }
