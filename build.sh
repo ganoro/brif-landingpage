@@ -26,3 +26,4 @@ then
 	s3cmd sync --delete-removed --no-mime-magic --exclude=*.css . s3://$subdomain.brif.us
 	s3cmd -m text/css sync --delete-removed --no-mime-magic --include=*.css . s3://$subdomain.brif.us
 fi
+
