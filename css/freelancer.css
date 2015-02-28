@@ -468,7 +468,7 @@ footer .footer-below {
 
 #customBtn:hover {
   background: #e74b37;
-  cursor: hand;
+  cursor: pointer;
 }
 
 span.label {
