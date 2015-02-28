@@ -37,8 +37,7 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 $(document).ready(function(){
-//    var carousel = $('.carousel')
-//    carousel.carousel();
+    
     
     $("#typed").typed({
         strings: ["Jira", "linkedin", "github", "twitter", "jenkins", "trello", "asana", "meetup", "twilio", "google drive", "product hunt", "techcrunch", "Weather", "JS Weekly", "mailchimp", "zendesk", "dropbox", "Facebook", "and pretty much everything else..."],
