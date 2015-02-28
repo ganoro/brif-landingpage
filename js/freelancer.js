@@ -37,8 +37,18 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 $(document).ready(function(){
-    var carousel = $('.carousel')
-    carousel.carousel();
+//    var carousel = $('.carousel')
+//    carousel.carousel();
+    
+    $("#typed").typed({
+        strings: ["Jira", "linkedin", "github", "twitter", "jenkins", "trello", "asana", "meetup", "twilio", "google drive", "product hunt", "techcrunch", "Weather", "JS Weekly", "mailchimp", "zendesk", "dropbox", "Facebook", "and pretty much everything else..."],
+        typeSpeed: 70,
+        backDelay: 1500,
+        loop: true,
+        contentType: 'text', // or text
+        // defaults to false for infinite loop
+        loopCount: false,
+        callback: function(){ },
+        resetCallback: function() { }
+    });
 });
-
-
