@@ -599,3 +599,7 @@ span.buttonText {
     text-align: center;
     text-decoration: underline;
 }
+
+.carousel-inner>.item {
+    text-decoration: underline;
+}
