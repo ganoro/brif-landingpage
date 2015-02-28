@@ -37,7 +37,8 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 $(document).ready(function(){
-        $('.carousel').carousel();
-    });
+    var carousel = $('.carousel')
+    carousel.carousel();
+});
 
 

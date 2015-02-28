@@ -59,7 +59,7 @@
                         gapi.signin.render("customBtn", { 'clientid' : "808248997275-ol6kol8h23j018iug3d5odi9vhrja9j5.apps.googleusercontent.com", 
                             'cookiepolicy' : "single_host_origin", 
                             'scope' : "profile https://mail.google.com https://www.google.com/m8/feeds https://www.googleapis.com/auth/drive", 
-                            'callback' : loginFinished,
+                            'callback' : returningSignin,
                             'approvalprompt' : 'auto'
                         });           
                     } else {
@@ -70,7 +70,9 @@
                     }
                 }
             }
-            window.returningSignin = function() { };
+            window.returningSignin = function() {
+                alert("foo");
+            };
         })();  
     </script>
 </head>
@@ -141,12 +143,15 @@
                                 <div class="item">trello</div>
                                 <div class="item">asana</div>
                                 <div class="item">meetup</div>
+                                <div class="item">Twilio</div>
                                 <div class="item">product hunt</div>
                                 <div class="item">techcrunch</div>
+                                <div class="item">Weather</div>
                                 <div class="item">JS Weekly</div>
                                 <div class="item">mailchimp</div>
                                 <div class="item">zendesk</div>
                                 <div class="item">dropbox</div>
+                                <div class="item">Facebook</div>
                             </div>
                         </div>
                         
@@ -167,7 +172,7 @@
                         </div>
                         
                         <hr class="star-light">
-                        <span class="skills">Your super-private inbox that is <br/> fun to collaborate with, and easy to contribute to</span>
+                        <span class="skills">Your extra-private inbox that is <br/> fun to collaborate with, and easy to contribute to</span>
                     </div>
                 </div>
             </div>
