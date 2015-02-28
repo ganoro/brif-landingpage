@@ -36,26 +36,8 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-(function() {
-    var order = true;
-    setTimeout(function() { 
-        $(".connector2").animate({
-            right: '-10em',
-            opacity: '0'
-        },  "slow", "linear", function() {
-            $(".connector2").animate({
-                right: '3em',
-            opacity: '0'},  "slow", "linear", function() {
-            });
-        });
-
-        $(".connector1").animate({
-            right: '-100px',
-            opacity: '1',
-            display: 'visible'
-        }, "slow");
-    }, 2000)
-    
-})();
+$(document).ready(function(){
+        $('.carousel').carousel();
+    });
 
 

@@ -451,16 +451,6 @@ footer .footer-below {
     opacity: 0;
 }
 
-.connector1 {
-    position: relative;
-    text-decoration: underline;
-    display: none;
-}
-
-.connector2 {
-    position: relative;
-    text-decoration: underline;
-}
 
 #gSignInWrapper {
     padding: 1.5em 0 1.5em 0;    
@@ -601,9 +591,11 @@ span.buttonText {
         font-size: 1em;
         font-family: 'Roboto',arial,sans-serif;
     }
-
-
 }
 
-
-
+#myCarousel {
+    margin:0 auto;
+    width: 10em;
+    text-align: center;
+    text-decoration: underline;
+}
