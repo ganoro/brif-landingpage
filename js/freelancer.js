@@ -52,7 +52,6 @@ $(document).ready(function(){
     });
     
     start = Date.getTime();
-
     $(window).unload(function() {
         end = Date.getTime();
         mixpanel.track("Page Closed", {'timeSpent': end - start} );
