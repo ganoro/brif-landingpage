@@ -51,9 +51,9 @@ $(document).ready(function(){
         resetCallback: function() { }
     });
     
-    start = new Date.getTime();
+    start = new Date().getTime();
     $(window).unload(function() {
-        end = new Date.getTime();
+        end = new Date().getTime();
         mixpanel.track("Page Closed", {'timeSpent': end - start} );
     });    
 });
