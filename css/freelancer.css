@@ -603,3 +603,7 @@ span.buttonText {
 .carousel-inner>.item {
     text-decoration: underline;
 }
+
+.note {
+    margin-top: 0.6em;
+}
