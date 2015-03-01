@@ -42,7 +42,6 @@
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
         
         mixpanel.init("09c1effef9a07dba86eaa9264d9bb869");
-        
     
         (function() {
               var po = document.createElement('script');
@@ -75,14 +74,17 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                             'approvalprompt' : 'auto'
                         });           
                     } else {
+                        alert("User signin");
+
                         $("#customBtn").click(function() {
                             alert("goes to brif");
                         });
                     }
                 }
             }
-            window.returningSignin = function() {
+            window.returningSignin = function(response) {
                 alert("User signin");
+                alert(response);
                 mixpanel.track("User signin success");
             };
         })();  
