@@ -73,19 +73,22 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                             'callback' : returningSignin,
                             'approvalprompt' : 'auto'
                         });           
+
+                        $("#customBtn").click(function() {
+                            mixpanel.track("Signin Button Pressed");
+                        });
+                        
                     } else {
                         alert("User signin");
 
                         $("#customBtn").click(function() {
-                            alert("goes to brif");
+                            mixpanel.track("Authenticated User Sign in Button Pressed");
                         });
                     }
                 }
             }
             window.returningSignin = function(response) {
-                alert("User signin");
-                alert(response);
-                mixpanel.track("User signin success");
+                mixpanel.track("Authenticated User Returned View", response);
             };
         })();  
     </script>
