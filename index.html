@@ -81,8 +81,14 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                     mixpanel.track("Landing Page View", options);
                     $("#customBtn").click(function() {
                         mixpanel.track("Button Pressed", options);
-                    });                  
+                    });
+                    mixpanel.track_links(".navbar-brand", "Click - Navbar Brand");
+                    mixpanel.track_links(".navbar-link-get", "Click - Navbar Get");
+                    mixpanel.track_links(".navbar-link-contribute", "Click - Navbar Contribute");
+                    mixpanel.track_links(".navbar-link-read", "Click - Navbar Read");
+                    mixpanel.track_links(".protfolio-link", "Click - Protfolio");
                 }
+                
             }
             window.returningSignin = function(response) {
                 mixpanel.track("Authenticated User Returned View", response);
@@ -122,13 +128,13 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                         </div>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">get</a>
+                        <a class="navbar-link-get" href="#portfolio">get</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">contribute</a>
+                        <a class="navbar-link-contribute" href="#about">contribute</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">read</a>
+                        <a class="navbar-link-read" href="#contact">read</a>
                     </li>
                 </ul>
             </div>
