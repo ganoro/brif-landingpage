@@ -73,7 +73,6 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                             'callback' : returningSignin,
                             'approvalprompt' : 'auto'
                         });           
-
                         
                     } 
                     // mixpanel
@@ -84,10 +83,7 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                     });
                     
                     var linkCallback = function(e) { mixpanel.track("Link Pressed", { link: e.currentTarget.href }); };
-                    $('.navbar-brand').click(linkCallback);
-                    $(".navbar-link-get").click(linkCallback);
-                    $(".navbar-link-contribute").click(linkCallback);
-                    $(".navbar-link-read").click(linkCallback);
+                    $('.nav a').click(linkCallback);
                     $(".protfolio-link").click(linkCallback);
                 }
                 
