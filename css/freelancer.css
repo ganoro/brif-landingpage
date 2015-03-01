@@ -551,7 +551,7 @@ span.buttonText {
 
 #customBtnHeader:hover {
   background: #e74b37;
-  cursor: hand;
+  cursor: pointer;
 }
 
 @media(min-width:768px) {
