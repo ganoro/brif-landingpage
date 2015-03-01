@@ -83,13 +83,12 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                         mixpanel.track("Button Pressed", options);
                     });
                     
-                    $('.navbar-brand').click(function(e) { mixpanel.track("Link Pressed", e); });
-                    
-//                    mixpanel.track_links(".navbar-brand", "Click - Navbar Brand");
-//                    mixpanel.track_links(".navbar-link-get", "Click - Navbar Get");
-//                    mixpanel.track_links(".navbar-link-contribute", "Click - Navbar Contribute");
-//                    mixpanel.track_links(".navbar-link-read", "Click - Navbar Read");
-//                    mixpanel.track_links(".protfolio-link", "Click - Protfolio");
+                    var linkCallback = function(e) { mixpanel.track("Link Pressed", { link: e.currentTarget.href }); };
+                    $('.navbar-brand').click(linkCallback);
+                    $(".navbar-link-get").click(linkCallback);
+                    $(".navbar-link-contribute").click(linkCallback);
+                    $(".navbar-link-read").click(linkCallback);
+                    $(".protfolio-link").click(linkCallback);
                 }
                 
             }
