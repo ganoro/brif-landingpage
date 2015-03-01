@@ -66,7 +66,6 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                 if (!once) {
                     once = true;
                     if (result.error) {
-                        mixpanel.track("Landing Page View", { auth: false });
                         
                         gapi.signin.render("customBtn", { 'clientid' : "808248997275-ol6kol8h23j018iug3d5odi9vhrja9j5.apps.googleusercontent.com", 
                             'cookiepolicy' : "single_host_origin", 
@@ -74,14 +73,16 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                             'callback' : returningSignin,
                             'approvalprompt' : 'auto'
                         });           
-
+                        
                     } else {
-                        mixpanel.track("Landing Page View", { auth: true });
 
                         $("#customBtn").click(function() {
                             mixpanel.track("Authenticated User Sign in Button Pressed");
                         });
+                        
                     }
+                    mixpanel.track("Landing Page View", { auth: typeof(result.error) == "undefined" });
+                    
                 }
             }
             window.returningSignin = function(response) {
