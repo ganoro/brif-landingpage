@@ -73,16 +73,15 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                             'callback' : returningSignin,
                             'approvalprompt' : 'auto'
                         });           
-                        
-                    } else {
 
-                        $("#customBtn").click(function() {
-                            mixpanel.track("Authenticated User Sign in Button Pressed");
-                        });
                         
-                    }
-                    mixpanel.track("Landing Page View", { auth: typeof(result.error) == "undefined" });
-                    
+                    } 
+                    // mixpanel
+                    var options = { auth: typeof(result.error) == "undefined" };
+                    mixpanel.track("Landing Page View", options);
+                    $("#customBtn").click(function() {
+                        mixpanel.track("Button Pressed", options);
+                    });                  
                 }
             }
             window.returningSignin = function(response) {
