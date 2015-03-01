@@ -10,6 +10,8 @@
  */
 var cbpAnimatedHeader = (function() {
 
+    var scroolDown = false, scroolUp = false;
+    
 	var docElem = document.documentElement,
 		header = document.querySelector( '.navbar-fixed-top' ),
 		didScroll = false,
@@ -28,11 +30,17 @@ var cbpAnimatedHeader = (function() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
 			classie.add( header, 'navbar-shrink' );
-            mixpanel.track("Landing Page Scrool Down");
+            if (!scroolDown) {
+                scroolDown = true;
+                mixpanel.track("Landing Page Scrool Down");    
+            }
 		}
 		else {
 			classie.remove( header, 'navbar-shrink' );
-            mixpanel.track("Landing Page Scrool Up");
+            if (!scroolUp) {
+                scroolUp = true;
+                mixpanel.track("Landing Page Scrool Up");
+            }
 		}
 		didScroll = false;
 	}
