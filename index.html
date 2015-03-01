@@ -42,7 +42,8 @@
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
         
         mixpanel.init("09c1effef9a07dba86eaa9264d9bb869");
-    
+        mixpanel.track("Landing Page View");
+            
         (function() {
               var po = document.createElement('script');
               po.type = 'text/javascript'; po.async = true;
@@ -66,7 +67,6 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                 if (!once) {
                     once = true;
                     if (result.error) {
-                        mixpanel.track("Landing Page View");
                         gapi.signin.render("customBtn", { 'clientid' : "808248997275-ol6kol8h23j018iug3d5odi9vhrja9j5.apps.googleusercontent.com", 
                             'cookiepolicy' : "single_host_origin", 
                             'scope' : "profile https://mail.google.com https://www.google.com/m8/feeds https://www.googleapis.com/auth/drive", 
