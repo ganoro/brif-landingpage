@@ -28,9 +28,11 @@ var cbpAnimatedHeader = (function() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
 			classie.add( header, 'navbar-shrink' );
+            mixpanel.track("Landing Page Scrool Down");
 		}
 		else {
 			classie.remove( header, 'navbar-shrink' );
+            mixpanel.track("Landing Page Scrool Up");
 		}
 		didScroll = false;
 	}

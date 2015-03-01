@@ -74,13 +74,8 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElemen
                             'approvalprompt' : 'auto'
                         });           
 
-                        $("#customBtn").click(function() {
-                            mixpanel.track("Signin Button Pressed");
-                        });
-                        
                     } else {
-                        alert("User signin");
-
+                        mixpanel.track("Authenticated User Sign View");
                         $("#customBtn").click(function() {
                             mixpanel.track("Authenticated User Sign in Button Pressed");
                         });
