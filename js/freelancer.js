@@ -40,7 +40,7 @@ $(document).ready(function(){
     
     
     $("#typed").typed({
-        strings: ["Jira", "linkedin", "github", "twitter", "todo list", "trello", "asana", "meetup", "twilio", "google drive", "product hunt", "techcrunch", "Weather", "JS Weekly", "mailchimp", "zendesk", "dropbox", "Facebook", "jenkins", "any service..."],
+        strings: ["Jira", "trello", "asana", "github", "stash", "my todo list", "twitter", "linkedin",  "meetup", "twilio", "google drive", "product hunt", "techcrunch", "Weather", "JS Weekly", "mailchimp", "zendesk", "dropbox", "Facebook", "jenkins", "any service..."],
         typeSpeed: 70,
         backDelay: 1500,
         loop: true,
