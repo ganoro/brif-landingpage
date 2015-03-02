@@ -103,15 +103,16 @@ header .intro-text .name {
     font-weight: 400;
 }
 
-header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 200;
+#portfolio .skills {
+    font-size: 1.5em;
+    font-weight: 300;
+    padding-bottom: 1em;
 }
 
 @media(min-width:768px) {
     header .container {
         padding-top: 13em;
-        padding-bottom: 8em;
+        padding-bottom: 12em;
     }
 
     header .intro-text .name {
