@@ -606,6 +606,7 @@ span.buttonText {
 }
 
 .note {
+    opacity: 0.92;
     margin-top: 0.6em;
 }
 
